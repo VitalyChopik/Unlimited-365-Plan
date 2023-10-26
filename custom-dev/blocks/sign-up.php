@@ -5,10 +5,16 @@
     <div class="sign-up__container">
       <h2 class="sign-up__title section__title"><?php the_sub_field('title');?></h2>
       <div class="sign-up__block">
-        <!-- form -->
-        <?php 
-        $image = get_sub_field('image');
-        echo wp_get_attachment_image( $image, 'full');?>
+        <h3 class="sign-up__form-title">Only entries from registered businesses will be eligible for consideration.</h3>
+        <span class="sign-up__info">Fields marked with an asterisk (*) are required.</span>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            region: "na1",
+            portalId: "2705714",
+            formId: "0a88b17a-4d32-40e8-97cd-a31dda960057"
+          });
+        </script>
       </div>
     </div>
   </div>

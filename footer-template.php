@@ -3,7 +3,7 @@
       <div class="footer__container">
         <div class="footer__logo">
         <?php 
-          $image = get_sub_field('logo', 'option');
+          $image = get_field('logo', 'option');
           echo wp_get_attachment_image( $image, 'full');
           ?>
         </div>

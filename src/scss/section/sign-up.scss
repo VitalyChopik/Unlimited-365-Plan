@@ -1,6 +1,7 @@
 .sign-up {
   padding: 40px 0;
   border-bottom: 1px solid #40404080;
+  background-color: #0392CF;
 
   @include media-mx(992) {
     padding: 30px 0
@@ -16,11 +17,133 @@
     text-align: center;
     max-width: 600px;
     margin-bottom: 40px;
+    color: #fff;
   }
 
   &__block {
-    img {
+    padding: 20px;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    max-width: 570px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+  }
+
+  &__form-title {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 125%;
+  }
+
+  &__info {
+    color: #848484;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 35px;
+    display: flex;
+  }
+}
+
+
+
+//form sign-up
+.sign-up {
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form-columns-2 {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+
+    @include media-mx(480) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .form-columns-1 {
+    width: 50%;
+    max-width: 100%;
+
+    @include media-mx(480) {
       width: 100%;
     }
   }
+
+  .hs-form-field {
+    @include media-mx(480) {
+      width: 100%;
+    }
+  }
+
+  label {
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #828282;
+    font-size: 16px;
+
+    @include media-mx(480) {
+      font-size: 13px;
+    }
+  }
+
+  .input {
+    margin-right: 8px;
+  }
+
+  .hs-input {
+    color: #a7a7a7;
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #ffffff;
+    border-bottom: 1px solid #3cc3dc;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    width: 100% !important;
+    height: 42px;
+  }
+
+  .hs-fieldtype-textarea.hs-input {
+    min-height: 42px;
+  }
+
+  .hs-error-msgs {
+    margin-bottom: 15px;
+  }
+
+  .hs-error-msg {
+    margin-bottom: 5px;
+    font-size: 12px;
+    text-decoration: underline;
+    font-weight: 700;
+    line-height: 125%;
+  }
+
+  .hs_submit {
+    .hs-button {
+      background: transparent linear-gradient(95deg, #1092ce 0%, #3cc3dc 100%) 0% 0% no-repeat padding-box !important;
+      border-radius: 35px !important;
+      min-width: 100px;
+      text-align: center;
+      color: #fff;
+      height: 45px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      margin-top: 9px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-top: 40px !important;
+      text-transform: lowercase;
+      font-weight: 600;
+    }
+  }
+
 }

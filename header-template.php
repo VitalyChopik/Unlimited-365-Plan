@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style="opacity:1;">
 <head>
   <style>.loaded { opacity: 1 }</style>
   <meta charset="UTF-8">

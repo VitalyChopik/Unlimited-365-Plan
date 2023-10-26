@@ -1,43 +1,55 @@
 
-import AOS from 'aos'
-import BaseHelpers from './helpers/BaseHelpers.js';
+// import AOS from 'aos'
+// import BaseHelpers from './helpers/BaseHelpers.js';
 
-BaseHelpers.checkWebpSupport();
+// // BaseHelpers.checkWebpSupport();
 
-BaseHelpers.addTouchClass();
+// BaseHelpers.addTouchClass();
 
-BaseHelpers.addLoadedClass();
+// BaseHelpers.addLoadedClass();
 
-AOS.init();
-
-const faqBoxs = document.querySelectorAll('.faq__box');
+// AOS.init();
 
 
-if (faqBoxs[0]) {
-  faqBoxs.forEach((faqBox) => {
-    const question = faqBox.querySelector('.faq__box-question');
-    question.addEventListener('click', () => {
-      faqBox.classList.toggle('active');
-    })
+
+
+document.addEventListener('DOMContentLoad', () => {
+  const faqBoxs = document.querySelectorAll('.faq__box');
+
+
+  if (faqBoxs[0]) {
+    faqBoxs.forEach((faqBox) => {
+      const question = faqBox.querySelector('.faq__box-question');
+      question.addEventListener('click', () => {
+        faqBox.classList.toggle('active');
+      })
+    });
+    faqBoxs[0].click();
+  }
+
+
+
+  const links = document.querySelectorAll('a[href^="#"]');
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault(); // Предотвращаем стандартное поведение ссылки
+
+      // Получаем цель прокрутки (id из атрибута href ссылки)
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        // Вычисляем позицию прокрутки с учетом отступа
+        var offset = 100;
+        var targetPosition = targetElement.offsetTop - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
+      }
+    });
   });
-  faqBoxs[0].click();
 }
-
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-anchorLinks.forEach(function (anchor) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const targetId = this.getAttribute('href').substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      const targetPosition = targetElement.offsetTop;
-
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
+);

@@ -31,9 +31,13 @@
 
   &__box {
     width: 20%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
 
     @include media-mx(992) {
       width: 33.3333%;
+      padding: 10px;
     }
 
     img {

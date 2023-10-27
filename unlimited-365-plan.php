@@ -99,7 +99,7 @@ get_header('template');
           <div class="partnership__box">
               <?php
               $image = get_sub_field('image');
-              echo wp_get_attachment_image( $photo, 'full' , '', ['class' => 'partnership__image' ] );?>
+              echo wp_get_attachment_image( $image, 'full' , '', ['class' => 'partnership__image' ] );?>
               <h3 class="partnership__box-title"><?php the_sub_field('box_title');?></h3>
           </div>
           <?php endwhile; ?>
@@ -121,7 +121,7 @@ get_header('template');
         $image = get_sub_field('image');
         ?>
         <div class="who__box">
-          <?php echo wp_get_attachment_image( $photo, 'full' , '', ['class' => 'who__box-icon' ] );?>
+          <?php echo wp_get_attachment_image( $image, 'full' , '', ['class' => 'who__box-icon' ] );?>
           <p class="who__box-text"><?php the_sub_field('text');?></p>
         </div>
         <?php endwhile; ?>
